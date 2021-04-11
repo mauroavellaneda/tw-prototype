@@ -1,0 +1,140 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 40rem;
+  position: relative;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  padding: 1rem 5rem 2rem 5rem;
+}
+
+.container h2 {
+  font-size: 44px;
+  font-weight: bold;
+}
+
+.container > div:nth-child(2) p {
+  font-size: 18px;
+  font-weight: bold;
+  width: 75%;
+  margin: 0.5rem auto 3rem;
+}
+
+.container > div:nth-child(2) {
+  text-align: center;
+}
+
+.articles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "first second"
+    "first third"
+    "first fourth";
+  height: 100%;
+  grid-gap: 1rem;
+  grid-column-gap: 3rem;
+}
+
+.first-article {
+  grid-area: first;
+  display: flex;
+  flex-direction: column;
+}
+
+.second-article {
+  grid-area: second;
+  display: flex;
+}
+
+.third-article {
+  grid-area: third;
+  display: flex;
+}
+
+.fourth-article {
+  grid-area: fourth;
+  display: flex;
+}
+
+.first-article .article-img {
+  width: 100%;
+  height: 100%;
+  background-image: url("../../images//mountains.png");
+  background-size: cover;
+  background-position: right;
+  border-radius: 30px;
+  margin-bottom: 0.8rem;
+  position: relative;
+}
+
+.article-img {
+  width: 20%;
+  min-width: 100px;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 30px;
+}
+
+.second-article .article-img {
+  background-image: url("../../images//norway.png");
+}
+
+.third-article .article-img {
+  background-image: url("../../images//denmark-copenhagen.png");
+}
+
+.fourth-article .article-img {
+  background-image: url("../../images//back-packing-guide.png");
+  background-position: right;
+}
+
+.articles p,
+.articles h4 {
+  margin-bottom: 0.5rem;
+  margin-left: 0.8rem;
+}
+
+.article-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 0.8rem;
+}
+
+@media (max-width: 992px) {
+  .container {
+    height: fit-content;
+    padding: 1rem;
+  }
+
+  .articles {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(auto-fit, 1fr);
+    grid-template-areas:
+      "first"
+      "second"
+      "third"
+      "fourth";
+    height: 100%;
+    grid-gap: 2rem;
+    justify-items: center;
+  }
+
+  .second-article,
+  .third-article,
+  .fourth-article {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .article-img {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,96 @@
+nav {
+  height: 5rem;
+  position: absolute;
+  top: 2rem;
+  left: 0px;
+  width: 100%;
+  z-index: 99;
+  font-family: Quicksand;
+}
+
+nav > div {
+  display: flex;
+  width: 1200px;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+nav ul {
+  display: inline;
+}
+
+nav li {
+  display: inline-block;
+  /* padding-right: 3rem;
+  font-size: 1.1rem;
+  font-weight: 500; */
+}
+nav ul a {
+  text-decoration: none;
+  color: black;
+  padding-right: 3rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+
+
+
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+  letter-spacing: 3px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #1f1f1f;
+}
+.logo img {
+  width: 40px;
+  height: 30px;
+}
+
+button {
+  margin-left: 1rem;
+  background-color: #f36888;
+  padding: 0.2rem 0.3rem;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.links {
+  padding-top: 20px;
+  padding-right: 90px;
+}
+
+button:nth-child(2) {
+  border: 1px solid #f36888;
+  background-color: transparent;
+  color: black;
+}
+
+@media (max-width: 992px) {
+  nav {
+    height: 5rem;
+    padding: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    z-index: 99;
+    align-items: center;
+    padding: 0 1rem;
+  }
+
+  nav ul {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .links {
+    display: none;
+  }
+}
